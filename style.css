@@ -106,45 +106,7 @@ body{
     height : 40px;
 }
 
-.form{
-    display : flex;
-    flex-direction: column;
-    justify-content : center;
-    align-items : center;
-}
-
-.form button{
-    background-color:  black;
-    border-radius: 20px;
-    color:  white;
-}
-
-.form form{
-    height : 330px;
-    display : flex;
-    flex-direction :column;
-    margin: auto;
-    text-align: center;
-    /* margin-block: 20px;   */   
-}
-
-.form-input input{
-    margin-block: 8px;
-}
-
-.form-input{
-    margin-inline: 550px;
     
-    display : flex;
-    flex-direction :column;
-}
-
-.agreement{
-    display : flex;
-    flex-direction : row;
-    align-items : center;
-    text-align: center
-}
 /* 
 .content{
     display : flex;
