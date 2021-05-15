@@ -1,0 +1,77 @@
+.content{
+    background-color: rgb(233, 232, 232);
+}
+
+.form{
+    display : flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items : center;
+    font-size: 12px;
+}
+
+.form-card{
+    margin-block: 5px;
+}
+
+.form button{
+    background-color:  black;
+    border-radius: 20px;
+    color:  white;
+}
+
+.form form{
+    height : 400px;
+    display : flex;
+    flex-direction :column;
+    margin: auto;
+    text-align: center;
+    border: 1px solid rgb(199, 191, 191);
+    border-radius: 10px;
+    width: 700px;
+    background-color: rgb(255, 255, 255);
+    margin-block: 50px;     
+    padding: 50px;
+    padding-inline: 50px;
+}
+
+#email-check-box, #password-check-box, #confirm-check-box{
+    margin-block: 10px;
+    font-size: 12px;
+}
+
+.form input{
+    /* margin-inline: 150px; */
+    height: 30px;
+    width: 300px;
+    border : 1px solid rgb(209, 209, 209);
+    padding-inline: 18px;
+}
+
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.form h1{
+    color: #455868;
+
+}
+
+#agreement {
+    height: 12px;
+    width: 25px;
+   
+    /* text-align: center; */
+}
+
+#submit-form{
+    width:250px;
+    height: 50px;
+    border : 0px solid;
+    border-radius: 5px;
+    margin-inline: auto;
+    margin-top: 80px;
+    background-color: red;
+}

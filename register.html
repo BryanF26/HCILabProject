@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
 <script src="form.js"></script>
@@ -31,31 +32,43 @@
 
     <div class="content">
        <div class="form">
+           
             <form action="">
-                <h3>Registrasi</h3>
-
-                <div class="form-input">
-                    <input type="email" name="" id="email" placeholder="Email" required>
-                    
-                    <div class="username">
-                        <input type="text" placeholder="username" required>
-                        <button type="submit">Validate</button>
+                <h4>Registrasi</h4>
+                <br>
+                
+                <div class="form-card">
+                    <input type="text" placeholder="Masukkan Email Anda" onblur="validate_email()" id = "email">
+                    <div id="email-check-box">
+                        
                     </div>
-                    
-    
-                    <input type="password" name="" id="password" placeholder="password" required>
-        
-                    <input type="password" name="" id="confirmpassword" placeholder="confirm password" required>
 
-                    <div class="agreement">
-                        <input type="radio" name="agreement" id="">  
-                        <p>I agree the terms and conditions</p>
+                </div>
+                
+                <div class="form-card">
+                    <input type="password" placeholder="Masukkan password Anda" onblur="validate_password()" id = "password">
+                    <div id="password-check-box">
+                        
                     </div>
-                   
-                    <button onclick="getAction()">Submit</button>
+
+                </div>
+                
+                <div class="form-card">
+                    <input type="password" placeholder="Masukkan konfirmasi password Anda" onblur="validate_confirm_password()" id = "confirm">
+                    <div id="confirm-check-box">
+                        
+                    </div>
 
                 </div>
 
+                
+                <div class="form-agree">
+                    <div class="agreement">
+                        <input type="checkbox" name="agreement" id="agreement"> I agree with terms and condition.
+                    </div>
+                </div>
+                
+                <button onclick="submit_form()" id="submit-form">Daftar Sekarang</button>
 
             </form>  
        </div>
