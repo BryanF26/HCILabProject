@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="register.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
-<script src="form.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+
+
+    <script src="form.js"></script>
 </head>
 <body>
     
@@ -26,7 +29,7 @@
             <a href="#">Characters</a>
             <a href="#">About</a>
             <a href="#">Gallery</a>
-            <a href="register.html">Register</a>
+            <a href="register.html" id="nav-active">Register</a>
         </div>
     </div>
 
@@ -66,9 +69,12 @@
                     <div class="agreement">
                         <input type="checkbox" name="agreement" id="agreement"> I agree with terms and condition.
                     </div>
+                    <div id="agree-check-box">
+                        
+                    </div>
                 </div>
                 
-                <button onclick="submit_form()" id="submit-form">Daftar Sekarang</button>
+                <button onmouseover="submit_form()" id="submit-form">Daftar Sekarang</button>
 
             </form>  
        </div>
