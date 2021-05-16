@@ -5,7 +5,6 @@ function validate_email(){
     if(email.length == 0){
         document.querySelector("#email-check-box").innerHTML = '<span style = "color: red   "> x Masukkan Email!</span>';
         return;
-        
     } 
 
     if(email.length < 5){
@@ -66,6 +65,10 @@ function validate_confirm_password(){
     let confirm = document.querySelector("#confirm").value;
     let password = document.querySelector("#password").value;
 
+    if(confirm.length == 0)
+        document.querySelector("#confirm-check-box").innerHTML = '<span style = "color: red"> Masukkan konfirmasi password! </span>';
+
+
     if(confirm.localeCompare(password) != 0) {
         document.querySelector("#confirm-check-box").innerHTML = '<span style = "color: red"> Konfirmasi Password Salah! </span>';
         return;
@@ -76,5 +79,26 @@ function validate_confirm_password(){
 }
 
 function submit_form(){
+    let email = document.querySelector("#email").value;
+    let password = document.querySelector("#password").value;
+    let confirm = document.querySelector("#confirm").value;
+    let is_agree = document.querySelector("#agreement").checked;
+
+    // alert(agreement);
+
+
+    if(email.length == 0)
+        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red   "> x Masukkan Email!</span>';
     
+
+    if(password.length == 0) 
+        document.querySelector("#password-check-box").innerHTML = '<span style = "color: red"> Masukkan Password!</span>';
+    
+    if(confirm.length == 0)
+        document.querySelector("#confirm-check-box").innerHTML = '<span style = "color: red"> Masukkan konfirmasi password! </span>';
+    
+    if(!is_agree){
+        document.querySelector("#agree-check-box").innerHTML = '<span style = "color: red"> Anda harus menyetujui terms and condition </span>';
+    }
+
 }
