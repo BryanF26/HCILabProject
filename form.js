@@ -120,10 +120,10 @@ function submit_form(){
     let username = document.querySelector("#username").value;
 
     if(email.length == 0)
-        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red   "> Masukkan email </span>';
+        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red"> Masukkan email </span>';
 
     if(username.length == 0)
-        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red   "> Masukkan Username </span>';
+        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red"> Masukkan Username </span>';
 
     if(password.length == 0) 
         document.querySelector("#password-check-box").innerHTML = '<span style = "color: red"> Masukkan Password!</span>';
