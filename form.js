@@ -3,7 +3,7 @@ function validate_email(){
     let email = document.querySelector("#email").value;
 
     if(email.length == 0){
-        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red   "> x Masukkan Email!</span>';
+        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red ">Masukkan Email!</span>';
         return;
     } 
 
@@ -78,18 +78,52 @@ function validate_confirm_password(){
     return;
 }
 
+function validate_username(){
+    let username = document.querySelector("#username").value;
+
+    if(username.length == 0){
+        document.querySelector("#username-check-box").innerHTML =  '<span style = "color: red"> Masukkan username anda! </span>';
+        return;
+    }
+
+    if(username.length < 6) {
+        document.querySelector("#username-check-box").innerHTML =  '<span style = "color: red"> Username harus lebih dari 6 karakter. </span>';
+        return;
+    }
+
+    let is_contains_symbol = false;
+
+    for(let i = 0; i < username.length; i++){
+        if(username.charCodeAt(i) >= 65 && username.charCodeAt(i) <= 90)
+            continue;
+        else if(username.charCodeAt(i) >= 97 && username.charCodeAt(i) <= 122) continue;
+        else if(username.charCodeAt(i) >= 48 && username.charCodeAt(i) <= 57) continue;
+        else is_contains_symbol = true;
+    }
+
+    if(is_contains_symbol) {
+        document.querySelector("#username-check-box").innerHTML =  '<span style = "color: red"> Username tidak boleh mengadung simbol. </span>';
+        return;
+    }
+
+    
+    document.querySelector("#username-check-box").innerHTML = '';
+    return;
+
+}
+
 function submit_form(){
     let email = document.querySelector("#email").value;
     let password = document.querySelector("#password").value;
     let confirm = document.querySelector("#confirm").value;
     let is_agree = document.querySelector("#agreement").checked;
-
-    // alert(agreement);
-
+    let username = document.querySelector("#username").value;
 
     if(email.length == 0)
-        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red   "> x Masukkan Email!</span>';
-    
+        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red   "> Masukkan email </span>';
+
+    if(username.length == 0)
+        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red   "> Masukkan Username </span>';
 
     if(password.length == 0) 
         document.querySelector("#password-check-box").innerHTML = '<span style = "color: red"> Masukkan Password!</span>';
@@ -100,5 +134,4 @@ function submit_form(){
     if(!is_agree){
         document.querySelector("#agree-check-box").innerHTML = '<span style = "color: red"> Anda harus menyetujui terms and condition </span>';
     }
-
 }

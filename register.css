@@ -23,7 +23,7 @@
 }
 
 .form form{
-    height : 400px;
+    height : 500px;
     display : flex;
     flex-direction :column;
     margin: auto;
@@ -37,7 +37,7 @@
     padding-inline: 50px;
 }
 
-#email-check-box, #password-check-box, #confirm-check-box, #agree-check-box{
+#email-check-box, #password-check-box, #confirm-check-box, #agree-check-box, #username-check-box{
     margin-block: 10px;
     font-size: 12px;
 }
