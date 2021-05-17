@@ -34,6 +34,92 @@ body{
     padding-left : 1vw;
 }
 
+.navbar-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.dropdown-content a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    z-index: 1000;
+    margin-block: 2vh;
+}
+
+.dropdown-content{
+    display : none;
+    background : bisque;
+    position: absolute;
+    width: 10vw;
+    top : 3vh;
+    /* right: 0.2px; */
+    /* right: 0vw; */
+    left : 0vw;
+    z-index: 1000;
+}
+
+.dropdown button{
+    background : transparent;
+    color: white;
+    border: none;
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
+    z-index: 1000;
+}
+
+.dropdown button:hover{
+    color: rgb(241, 99, 123);
+}
+
+.dropdown:hover .dropdown-content{
+    display : block;
+    /* background-color: red; */
+    background : rgb(24, 26, 27);   
+    /* height: 8vh; */
+}
+
+.dropdown{
+    height : 100%;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1000;
+ }
+
+.dropdown-content a:hover{
+    /* margin: 0px; */
+    background-color: red;
+    color: white;
+    z-index: 1000;
+}
+
+/* sebuah rule / aturan yang akan diteapkan ketika memenuhi kodnisi tertenu */
+/* screen => layar komputer / handphone / tablet */
+
+@media screen and (max-height: 100px){
+    body{
+        background-color: red;
+    }
+
+    .header{
+        flex-direction : column;
+    }
+
+    .dropdown-content{
+        position: static;
+    }
+
+    .dropdown{
+        position: static;
+    }
+
+}
+
+
 .logo-left{
     display : flex;
     flex-direction : row;
