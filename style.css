@@ -45,7 +45,7 @@ body{
     display: block;
     text-decoration: none;
     color: black;
-    z-index: 1000;
+    /* z-index: 1000; */
     margin-block: 2vh;
 }
 
@@ -58,7 +58,7 @@ body{
     /* right: 0.2px; */
     /* right: 0vw; */
     left : 0vw;
-    z-index: 1000;
+    /* z-index: 1000; */
 }
 
 .dropdown button{
@@ -79,6 +79,8 @@ body{
     /* background-color: red; */
     background : rgb(24, 26, 27);   
     /* height: 8vh; */
+   
+
 }
 
 .dropdown{
@@ -91,14 +93,9 @@ body{
  }
 
 .dropdown-content a:hover{
-    /* margin: 0px; */
-    background-color: red;
-    color: white;
+    color: rgb(241, 99, 123);
     z-index: 1000;
 }
-
-/* sebuah rule / aturan yang akan diteapkan ketika memenuhi kodnisi tertenu */
-/* screen => layar komputer / handphone / tablet */
 
 @media screen and (max-height: 100px){
     body{

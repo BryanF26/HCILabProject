@@ -65,9 +65,10 @@ function validate_confirm_password(){
     let confirm = document.querySelector("#confirm").value;
     let password = document.querySelector("#password").value;
 
-    if(confirm.length == 0)
+    if(confirm.length == 0){
         document.querySelector("#confirm-check-box").innerHTML = '<span style = "color: red"> Masukkan konfirmasi password! </span>';
-
+        return;
+    }
 
     if(confirm.localeCompare(password) != 0) {
         document.querySelector("#confirm-check-box").innerHTML = '<span style = "color: red"> Konfirmasi Password Salah! </span>';
@@ -123,7 +124,7 @@ function submit_form(){
         document.querySelector("#email-check-box").innerHTML = '<span style = "color: red"> Masukkan email </span>';
 
     if(username.length == 0)
-        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red"> Masukkan Username </span>';
+        document.querySelector("#username-check-box").innerHTML = '<span style = "color: red"> Masukkan Username </span>';
 
     if(password.length == 0) 
         document.querySelector("#password-check-box").innerHTML = '<span style = "color: red"> Masukkan Password!</span>';
