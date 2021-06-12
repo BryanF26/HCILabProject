@@ -10,7 +10,7 @@
 
 .slider-inner{
     /* width: 60vw; */
-    width: 97.2vw;
+    width: 98.5vw;
     /* height: 30vh; */
     position: relative;
     overflow: hidden;
@@ -20,7 +20,7 @@
 
 .slider-inner img{
     display: none;
-    width: 97.2vw;
+    width: 98.5vw;
     /* height: 50vh;     */
 }
 
@@ -30,19 +30,19 @@
 
 .prev, .next{
     float: left;
-    margin-top: 300px;
+    margin-top: 60vh;
     cursor: pointer;
 }
 
 .prev{
     position: relative;
-    margin-right: -45px;
+    margin-right: -5vw;
     z-index: 100;
 }
 
 .next{
     position: relative;
-    margin-left: -45px;
+    margin-left: -5vw;
     z-index: 100;
 }
 
