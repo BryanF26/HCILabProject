@@ -1,6 +1,7 @@
 
 .content{
-    background-color: rgb(233, 232, 232);
+    background-image: url(assets/slider2.jpg);
+    color: white;
 }
 
 
@@ -31,11 +32,11 @@
     border: 1px solid rgb(199, 191, 191);
     border-radius: 10px;
     width: 700px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(12, 12, 12,.8);
     margin-block: 50px;     
     padding: 50px;
     padding-inline: 50px;
-}
+}   
 
 #email-check-box, #password-check-box, #confirm-check-box, #agree-check-box, #username-check-box{
     margin-block: 10px;
@@ -57,7 +58,7 @@ p{
 
 
 .form h1{
-    color: #455868;
+    color: #ffffff;
 
 }
 
