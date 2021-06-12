@@ -9,8 +9,9 @@
 }
 
 .slider-inner{
-    width: 1490px;
-    height: 700;
+    /* width: 60vw; */
+    width: 97.2vw;
+    /* height: 30vh; */
     position: relative;
     overflow: hidden;
     float: left;
@@ -19,8 +20,8 @@
 
 .slider-inner img{
     display: none;
-    width: 1490px;
-    height: 700;
+    width: 97.2vw;
+    /* height: 50vh;     */
 }
 
 .slider-inner img.active{
