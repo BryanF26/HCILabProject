@@ -17,6 +17,11 @@ function validate_email(){
         return;
     }
 
+    if(!email.endsWith(".com")){
+        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red"> Harus diakhiri oleh .com</span>';
+        return;
+    }
+
     document.querySelector("#email-check-box").innerHTML = '';
     return;
 }
