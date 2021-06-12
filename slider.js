@@ -17,7 +17,7 @@ $(document).ready(function(){
     $('.prev').on('click', function(){
         let currentImg = $('.active');
         let prevImg = currentImg.prev();
-        
+        let firstImg = currentImg.nextAll().last();
         if(prevImg.length){
             currentImg.removeClass('active').css('z-index', -10);
             prevImg.addClass('active').css('z-index', 10);
