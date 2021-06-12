@@ -41,7 +41,7 @@ h1{
 .content-image img{
     width: 20vw;
     border: 2px solid rgb(243, 106, 106);
-    border-radius: 2px;
+    border-radius: 5px;
     margin-inline: 2vw;
     margin-block: 2vw;
 }
