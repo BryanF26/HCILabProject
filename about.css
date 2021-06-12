@@ -1,19 +1,33 @@
-body{
-    margin : 0px;
-    padding : 0px;
-    font-family: 'Sora', sans-serif;
-    text-decoration: none;
-}
 
 .content-about{
     display: flex;
+    height: 100vh;
     flex-direction: row;
-    background-color :rgb(24, 26, 27,.5);
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    background-image: url(assets/slider2.jpg);
+    background-size: cover;
+    /* background-color :rgb(24, 26, 27); */
+    /* margin: 10vh; */
+    padding: 10vh;
+}
+
+
+.content-box{
+    background-color: rgb(24, 26, 27, .6);
+    width: 80vw;
+    /* opacity: 50%; */
+    color: white;
+    border-radius: 2vw;
 }
 
 .content-header h1{
-    margin-left: 42vw;
-    color: white;
+    z-index: 10;
+    margin-top: 20px;
+    text-align: center;
+    /* opacity: 100%; */
+    /* margin: auto; */
+}
+
+.content-image img{
+    width: 12vw;
 }
