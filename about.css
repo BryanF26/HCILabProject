@@ -1,0 +1,19 @@
+body{
+    margin : 0px;
+    padding : 0px;
+    font-family: 'Sora', sans-serif;
+    text-decoration: none;
+}
+
+.content-about{
+    display: flex;
+    flex-direction: row;
+    background-color :rgb(24, 26, 27);
+    margin: 0;
+    padding: 0;
+}
+
+.content-header h1{
+    margin-left: 42vw;
+    color: white;
+}
