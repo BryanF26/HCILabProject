@@ -30,9 +30,9 @@
             <div class="dropdown">
                 <button>Characters ▼</button>
                 <div class="dropdown-content">
-                    <a href="#">Character 1</a>
-                    <a href="#">Character 2</a>
-                    <a href="#">Character 3</a>
+                    <a href="Character_1.html">Character 1</a>
+                    <a href="Character_2.html">Character 2</a>
+                    <a href="Character_3.html">Character 3</a>
                 </div>
             </div>
             
@@ -44,14 +44,14 @@
 
     <div class="content">
        <div class="form">
-           
-            <form action="">
-                <h2>Registrasi</h2>
+            <div class="form-box">
+            <!-- <form action=""> -->
+                <h1>Registrasi</h1>
                 <br>
                 
                 <div class="form-card">
                     <input type="text" placeholder="Masukkan Email Anda" onblur="validate_email()" id = "email">
-                    <div id="email-check-box">
+                    <div id="email-check-box" class="error">
                         
                     </div>
 
@@ -59,14 +59,14 @@
                 
                 <div class="form-card">
                     <input type="text" name="" id="username" onblur="validate_username()" placeholder="Masukkan username">
-                    <div id="username-check-box">
+                    <div id="username-check-box" class="error">
                         
                     </div>
                 </div>
 
                 <div class="form-card">
                     <input type="password" placeholder="Masukkan password Anda" onblur="validate_password()" id = "password">
-                    <div id="password-check-box">
+                    <div id="password-check-box" class="error">
                         
                     </div>
 
@@ -74,7 +74,7 @@
                 
                 <div class="form-card">
                     <input type="password" placeholder="Masukkan konfirmasi password Anda" onblur="validate_confirm_password()" id = "confirm">
-                    <div id="confirm-check-box">
+                    <div id="confirm-check-box" class="error">
                         
                     </div>
 
@@ -85,14 +85,15 @@
                     <div class="agreement">
                         <input type="checkbox" name="agreement" id="agreement"> I agree with terms and condition.
                     </div>
-                    <div id="agree-check-box">
+                    <div id="agree-check-box" class="error">
                         
                     </div>
                 </div>
                 
-                <button onmouseover="submit_form()" id="submit-form">Daftar Sekarang</button>
+                <button onclick="submit_form()" id="submit-form">Daftar Sekarang</button>
 
-            </form>  
+            <!-- </form>   -->
+            </div>
        </div>
     </div>
 

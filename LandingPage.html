@@ -7,13 +7,9 @@
     <title>Home Page</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="content-index.css">
+    <link rel="stylesheet" href="LandingPage.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
-
-    <script src="Jquery.js"></script>
-    <script src="slider.js"></script>
-
 </head>
 <body>
     
@@ -26,7 +22,7 @@
             </div>    
         </div>
         <div class="navbar-right">
-            <a href="index.html" id="nav-active">Home</a>
+            <a href="index.html">Home</a>
 
             <div class="dropdown">
                 <button>Characters ▼</button>
@@ -39,24 +35,37 @@
             
             <a href="about.html">About</a>
             <a href="gallery.html">Gallery</a>
-            <a href="register.html" >Register</a>
+            <a href="register.html" id="nav-active" >Register</a>
         </div>
     </div>
 
-    <div class="content-index">
-        <div class="slider-outer">
-            <img src="assets/arrow-left.png" alt="" class="prev">
-            <div class="slider-inner">
-                <img src="assets/slider1.png" alt="" class="active">
-                
-                <img src="assets/slider2.jpg" alt="" srcset="">
-                <img src="assets/slider3.jpg" alt="" srcset="">
-                
+    <div class="content-table">
+        <div class="table-box">
+            <div class="content-header">
+                <h1>Landing Page</h1>
             </div>
-            <img src="assets/arrow-right.png" alt="" class = "next">
+            <table border="1px solid black" class="table">
+                <tr>
+                    <th>Email</th>
+                    <td>
+                       <div id="#email"></div> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>Username</th>
+                    <td>
+                       <div id="#username"></div> 
+                    </td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td>
+                       <div id="#Password"></div> 
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
-
 
     <div class="footer">
         <div class="contact-us">
@@ -71,7 +80,6 @@
             <div class="contact-us-right">
                 <img src="assets/contactus.png" alt="">
             </div>
-
         </div>
 
         <div class="follow-us">
@@ -79,12 +87,15 @@
             
             <a href="https://www.facebook.com/"><img src="assets/fb.png"></a>
 
-            <a href="https://www.instagram.com/"><img src="assets/instagram.png" alt="instagram" srcset=""></a>
+            <a href="https://www.instagram.com/"><img src="assets/instagram.png" alt="" srcset=""></a>
             
-            <a href="https://www.youtube.com""><img src="assets/yt.png" alt="youtube" srcset=""></a>
+            <a href="https://www.youtube.com""><img src="assets/yt.png" alt="" srcset=""></a>
         </div>
-
     </div>
-
+    <script>
+        document.querySelector("#email").innerHTML=sessionStorage.getItem("#email");
+        document.querySelector("#username").innerHTML=sessionStorage.getItem("#username");
+        document.querySelector("#password").innerHTML=sessionStorage.getItem("#password");
+    </script>
 </body>
 </html>

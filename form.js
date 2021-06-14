@@ -3,22 +3,22 @@ function validate_email(){
     let email = document.querySelector("#email").value;
 
     if(email.length == 0){
-        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red ">Masukkan Email!</span>';
+        document.querySelector("#email-check-box").innerHTML = 'Masukkan Email!';
         return;
     } 
 
     if(email.length < 5){
-        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red"> Email harus lebih dari 5 karakter!</span>';
+        document.querySelector("#email-check-box").innerHTML = 'Email harus lebih dari 5 karakter!';
         return;
     }
 
     if(!email.includes("@")){
-        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red"> Email harus mengandung \'@\'</span>';
+        document.querySelector("#email-check-box").innerHTML = 'Email harus mengandung \'@\'';
         return;
     }
 
     if(!email.endsWith(".com")){
-        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red"> Harus diakhiri oleh .com</span>';
+        document.querySelector("#email-check-box").innerHTML = 'Harus diakhiri oleh .com';
         return;
     }
 
@@ -42,23 +42,23 @@ function validate_password(){
 
 
     if(password.length == 0) {
-        document.querySelector("#password-check-box").innerHTML = '<span style = "color: red"> Masukkan Password!</span>';
+        document.querySelector("#password-check-box").innerHTML = 'Masukkan Password!';
         return;
     }
 
     if(password.length < 6) {
-        document.querySelector("#password-check-box").innerHTML = '<span style = "color: red"> Password harus lebih dari 6 karakter. </span>';
+        document.querySelector("#password-check-box").innerHTML = 'Password harus lebih dari 6 karakter.';
         return;
     }
 
 
     if(!is_contains_number){
-        document.querySelector("#password-check-box").innerHTML = '<span style = "color: red"> Password harus mengandung angka! </span>';
+        document.querySelector("#password-check-box").innerHTML = 'Password harus mengandung angka!';
         return;
     }
 
     if(!is_contains_uppercase || !is_contains_lowercase){
-        document.querySelector("#password-check-box").innerHTML = '<span style = "color: red"> Password harus mengandung huruf besar dan huruf kecil! </span>';
+        document.querySelector("#password-check-box").innerHTML = 'Password harus mengandung huruf besar dan huruf kecil!';
         return;
     }
 
@@ -71,12 +71,12 @@ function validate_confirm_password(){
     let password = document.querySelector("#password").value;
 
     if(confirm.length == 0){
-        document.querySelector("#confirm-check-box").innerHTML = '<span style = "color: red"> Masukkan konfirmasi password! </span>';
+        document.querySelector("#confirm-check-box").innerHTML = 'Masukkan konfirmasi password!';
         return;
     }
 
     if(confirm.localeCompare(password) != 0) {
-        document.querySelector("#confirm-check-box").innerHTML = '<span style = "color: red"> Konfirmasi Password Salah! </span>';
+        document.querySelector("#confirm-check-box").innerHTML = 'Konfirmasi Password Salah!';
         return;
     }
 
@@ -88,12 +88,12 @@ function validate_username(){
     let username = document.querySelector("#username").value;
 
     if(username.length == 0){
-        document.querySelector("#username-check-box").innerHTML =  '<span style = "color: red"> Masukkan username anda! </span>';
+        document.querySelector("#username-check-box").innerHTML =  'Masukkan username anda!';
         return;
     }
 
     if(username.length < 6) {
-        document.querySelector("#username-check-box").innerHTML =  '<span style = "color: red"> Username harus lebih dari 6 karakter. </span>';
+        document.querySelector("#username-check-box").innerHTML =  'Username harus lebih dari 6 karakter.';
         return;
     }
 
@@ -108,7 +108,7 @@ function validate_username(){
     }
 
     if(is_contains_symbol) {
-        document.querySelector("#username-check-box").innerHTML =  '<span style = "color: red"> Username tidak boleh mengadung simbol. </span>';
+        document.querySelector("#username-check-box").innerHTML =  'Username tidak boleh mengadung simbol.';
         return;
     }
 
@@ -118,26 +118,55 @@ function validate_username(){
 
 }
 
+
 function submit_form(){
     let email = document.querySelector("#email").value;
     let password = document.querySelector("#password").value;
     let confirm = document.querySelector("#confirm").value;
     let is_agree = document.querySelector("#agreement").checked;
     let username = document.querySelector("#username").value;
+    let isValid = true;
 
-    if(email.length == 0)
-        document.querySelector("#email-check-box").innerHTML = '<span style = "color: red"> Masukkan email </span>';
+    if(email.length == 0){
+        document.querySelector("#email-check-box").innerHTML = 'Masukkan email';
+        isValid = false;
+    }else{
+        document.querySelector("#email-check-box").innerHTML = '';
+    }
 
-    if(username.length == 0)
-        document.querySelector("#username-check-box").innerHTML = '<span style = "color: red"> Masukkan Username </span>';
 
-    if(password.length == 0) 
-        document.querySelector("#password-check-box").innerHTML = '<span style = "color: red"> Masukkan Password!</span>';
+    if(username.length == 0){
+        document.querySelector("#username-check-box").innerHTML = 'Masukkan Username';
+        isValid = false;
+    }else{
+        document.querySelector("#username-check-box").innerHTML = '';
+    }
+
+    if(password.length == 0){
+        document.querySelector("#password-check-box").innerHTML = 'Masukkan Password!';
+        isValid = false;
+    }else{
+        document.querySelector("#password-check-box").innerHTML = '';
+    }
     
-    if(confirm.length == 0)
-        document.querySelector("#confirm-check-box").innerHTML = '<span style = "color: red"> Masukkan konfirmasi password! </span>';
+    if(confirm.length == 0){
+        document.querySelector("#confirm-check-box").innerHTML = 'Masukkan konfirmasi password!';
+        isValid = false;
+    }else{
+        document.querySelector("#confirm-check-box").innerHTML = '';
+    }
     
     if(!is_agree){
-        document.querySelector("#agree-check-box").innerHTML = '<span style = "color: red"> Anda harus menyetujui terms and condition </span>';
+        document.querySelector("#agree-check-box").innerHTML = 'Anda harus menyetujui terms and condition';
+        isValid = false;
+    }else{
+        document.querySelector("#agree-check-box").innerHTML = '';
+    }
+
+    if(isValid){
+        sessionStorage.setItem("email",email.value);
+        sessionStorage.setItem("username",username.value);
+        sessionStorage.setItem("password",password.value);
+        window.location.href = './LandingPage.html';
     }
 }

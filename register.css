@@ -13,6 +13,14 @@
     font-size: 12px;
 }
 
+.form h1{
+    z-index: 10;
+    margin-top: 20px;
+    text-align: center;
+    /* opacity: 100%; */
+    /* margin: auto; */
+}
+
 .form-card{
     margin-block: 5px;
 }
@@ -23,7 +31,7 @@
     color:  white;
 }
 
-.form form{
+.form-box{
     height : 500px;
     display : flex;
     flex-direction :column;
@@ -78,4 +86,8 @@ p{
     margin-inline: auto;
     margin-top: 10px;
     background-color: red;
+}
+
+.error{
+    color:red;
 }
