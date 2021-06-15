@@ -91,3 +91,7 @@ p{
 .error{
     color:red;
 }
+
+button:hover{
+    cursor: pointer;
+}
