@@ -208,10 +208,15 @@ body{
     }
 
     .dropdown-content{
-        top :  15vh;
+        top :  6vh;
         width: 20vw;
         /* position: static; */
     }
-
+    
+    .contact-us-right img{
+        width: 150px;
+        height: 130px;
+    }
+    
 }
 
