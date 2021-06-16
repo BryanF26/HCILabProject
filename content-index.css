@@ -106,6 +106,10 @@
     text-align: center;
 }
 
+.register-index:hover{
+    background-color: darkred;
+}
+
 @media screen and (max-width: 800px){
     .slider-inner{
         /* width: 60vw; */
@@ -133,4 +137,13 @@
         height: 50px;
         margin-top: 20%;
     }
+
+    .join{
+        height: 100vh;
+    }
+
+    .join a{
+        width: 20%;   
+    }
+
 }

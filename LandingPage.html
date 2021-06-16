@@ -22,7 +22,7 @@
             </div>    
         </div>
         <div class="navbar-right">
-            <a href="index.html">Home</a>
+            <a href="index.html" id="nav-active">Home</a>
 
             <div class="dropdown">
                 <button>Characters ▼</button>
@@ -35,35 +35,18 @@
             
             <a href="about.html">About</a>
             <a href="gallery.html">Gallery</a>
-            <a href="register.html" id="nav-active" >Register</a>
+            <a href="register.html" id="register">Register Now</a>
         </div>
     </div>
 
-    <div class="content-table">
-        <div class="table-box">
+
+    <div class="content-landing">
+        <div class="content-box">
             <div class="content-header">
-                <h1>Landing Page</h1>
+                <h1>Registered!</h1>
+                <p>You are now registered as </p>
+                <h2 id="username"></h2>
             </div>
-            <table border="1px solid black" class="table">
-                <tr>
-                    <th>Email</th>
-                    <td>
-                       <div id="#email"></div> 
-                    </td>
-                </tr>
-                <tr>
-                    <th>Username</th>
-                    <td>
-                       <div id="#username"></div> 
-                    </td>
-                </tr>
-                <tr>
-                    <th>Password</th>
-                    <td>
-                       <div id="#Password"></div> 
-                    </td>
-                </tr>
-            </table>
         </div>
     </div>
 
@@ -92,10 +75,9 @@
             <a href="https://www.youtube.com""><img src="assets/yt.png" alt="" srcset=""></a>
         </div>
     </div>
+    <script src="form.js"></script>
     <script>
-        document.querySelector("#email").innerHTML=sessionStorage.getItem("#email");
-        document.querySelector("#username").innerHTML=sessionStorage.getItem("#username");
-        document.querySelector("#password").innerHTML=sessionStorage.getItem("#password");
+        document.getElementById("username").innerHTML=sessionStorage.getItem("username");   
     </script>
 </body>
 </html>

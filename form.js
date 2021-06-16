@@ -130,7 +130,7 @@ function submit_form(){
     if(email.length == 0){
         document.querySelector("#email-check-box").innerHTML = 'Masukkan email';
         isValid = false;
-    }else{
+    } else{
         document.querySelector("#email-check-box").innerHTML = '';
     }
 
@@ -138,35 +138,33 @@ function submit_form(){
     if(username.length == 0){
         document.querySelector("#username-check-box").innerHTML = 'Masukkan Username';
         isValid = false;
-    }else{
+    } else{
         document.querySelector("#username-check-box").innerHTML = '';
     }
 
     if(password.length == 0){
         document.querySelector("#password-check-box").innerHTML = 'Masukkan Password!';
         isValid = false;
-    }else{
+    } else{
         document.querySelector("#password-check-box").innerHTML = '';
     }
     
     if(confirm.length == 0){
         document.querySelector("#confirm-check-box").innerHTML = 'Masukkan konfirmasi password!';
         isValid = false;
-    }else{
+    } else{
         document.querySelector("#confirm-check-box").innerHTML = '';
     }
     
     if(!is_agree){
         document.querySelector("#agree-check-box").innerHTML = 'Anda harus menyetujui terms and condition';
         isValid = false;
-    }else{
+    } else{
         document.querySelector("#agree-check-box").innerHTML = '';
     }
 
     if(isValid){
-        sessionStorage.setItem("email",email.value);
-        sessionStorage.setItem("username",username.value);
-        sessionStorage.setItem("password",password.value);
+        sessionStorage.setItem("username",username);
         window.location.href = './LandingPage.html';
-    }
+    } 
 }
