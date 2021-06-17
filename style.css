@@ -229,7 +229,7 @@ body{
 
     .dropdown-content{
         top :  75%;
-        width: 20vw;
+        width: 100%;
     }
     
 }
