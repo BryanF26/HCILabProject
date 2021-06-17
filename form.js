@@ -111,13 +111,11 @@ function validate_username(){
         document.querySelector("#username-check-box").innerHTML =  'Username tidak boleh mengadung simbol.';
         return;
     }
-
     
     document.querySelector("#username-check-box").innerHTML = '';
     return;
 
 }
-
 
 function submit_form(){
     let email = document.querySelector("#email").value;
