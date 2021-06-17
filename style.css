@@ -225,3 +225,14 @@ body{
     
 }
 
+@media screen and (max-height: 800px){
+
+    .dropdown-content{
+        top :  75%;
+        width: 20vw;
+    }
+    
+}
+
+
+
