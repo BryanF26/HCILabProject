@@ -55,8 +55,8 @@ body{
     display : none;
     background : bisque;
     position: absolute;
-    width: 10vw;
-    top : 3vh;
+    width: 9vw;
+    top : 4vh;
     /* right: 0.2px; */
     /* right: 0vw; */
     left : 0vw;
@@ -225,14 +225,13 @@ body{
     
 }
 
-@media screen and (max-height: 800px){
+@media screen and (min-height: 800px){
 
     .dropdown-content{
-        top :  75%;
-        width: 100%;
+        top :  80%;
+        position: static;
     }
     
 }
-
 
 
