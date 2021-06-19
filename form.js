@@ -1,16 +1,13 @@
 
 function validate_email(){
     let email = document.querySelector("#email").value;
+    let countAt = 0;
+    let length_before_at = 0;
 
     if(email.length == 0){
         document.querySelector("#email-check-box").innerHTML = 'Masukkan Email!';
         return;
     } 
-
-    if(email.length < 5){
-        document.querySelector("#email-check-box").innerHTML = 'Email harus lebih dari 5 karakter!';
-        return;
-    }
 
     if(!email.includes("@")){
         document.querySelector("#email-check-box").innerHTML = 'Email harus mengandung \'@\'';
@@ -19,6 +16,23 @@ function validate_email(){
 
     if(!email.endsWith(".com")){
         document.querySelector("#email-check-box").innerHTML = 'Harus diakhiri oleh .com';
+        return;
+    }
+
+    for(let i = 0; i < email.length; i++){
+        if(email.charCodeAt(i) == 64){
+            countAt++;
+            length_before_at = i;
+        }
+    }
+
+    if(countAt > 1) {
+        document.querySelector("#email-check-box").innerHTML = 'Email anda harus mengandung 1 buah @ saja.';
+        return;
+    }
+
+    if(email.length < 5 || length_before_at < 5){
+        document.querySelector("#email-check-box").innerHTML = 'Email harus lebih dari 5 karakter!';
         return;
     }
 
@@ -163,6 +177,6 @@ function submit_form(){
 
     if(isValid){
         sessionStorage.setItem("username",username);
-        window.location.href = './LandingPage.html';
+        window.location.href = './landingpage.html';
     } 
 }
