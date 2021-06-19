@@ -13,8 +13,8 @@
 
 
 .content-box{
-    background-color: rgb(24, 26, 27, .6);
-    width: 80vw;
+    background-color: rgb(24, 26, 27, .8);
+    width: 50vw;
     /* opacity: 50%; */
     color: white;
     border-radius: 2vw;
@@ -28,8 +28,14 @@
     /* margin: auto; */
 }
 
+.content-text{
+    margin-inline: 4vw;
+    text-align: justify;
+}
+
 .content-text h2{
-    color: silver;
+    color: rgb(247, 100, 33);
+    margin: 0px;
 }
 
 .content-image img{
