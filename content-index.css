@@ -56,7 +56,7 @@
 .join{
     display: flex;
     flex-direction: column;
-    height: 60vh;
+    height: 80%;
     background-color: rgb(24, 26, 28);
     border-bottom: 5px solid red;
     border-top: 5px solid red;
@@ -66,7 +66,7 @@
 
 .join-inner{
     display: flex;
-    height: 60vh;
+    height: 80%;
     flex-direction: row;
     justify-content: space-around;
     margin-inline: 2vw;
@@ -138,13 +138,23 @@
         margin-top: 20%;
     }
 
-    .join{
+    /* .join{
         height: 100vh;
+    } */
+
+    .join-inner{
+        flex-direction: column;
+        height: 100%;
     }
 
-    .join a{
-        width: 20%;   
+    .join-inner img{
+        width: 80%;
+        margin-block: 5vh;
     }
+
+        .join a{
+            width: 20%;   
+        }
 
 }
 

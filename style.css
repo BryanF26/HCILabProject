@@ -3,6 +3,7 @@ body{
     padding : 0px;
     font-family: 'Sora', sans-serif;
     text-decoration: none;
+   
 }
 
 #nav-active{
@@ -205,12 +206,22 @@ body{
 
 @media screen and (max-width: 800px){
 
+    /* .body{
+        font-size: 80%;
+    } */
+
     .header{
         display: flex;
         flex-direction : column;
         height : 100%;
         padding-bottom : 2vh;
+        font-size: 80%;
     }
+
+    .dropdown button{
+        font-size: 90%;
+    }
+
 
     .dropdown-content{
         top :  6vh;
@@ -218,20 +229,28 @@ body{
         /* position: static; */
     }
     
+    .contact-us{
+        flex-direction: column;
+    }
+
+    .contact-us-right{
+        margin: auto;
+    }
     .contact-us-right img{
         width: 150px;
         height: 130px;
+        
     }
     
 }
 
-@media screen and (min-height: 800px){
+/* @media screen and (min-height: 800px){
 
     .dropdown-content{
         top :  80%;
         position: static;
     }
-    
-}
+
+} */
 
 
